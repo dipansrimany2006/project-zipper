@@ -1,0 +1,38 @@
+{
+  "name": "project-zipper",
+  "version": "1.0.0",
+  "description": "Create project zips respecting .gitignore patterns",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "project-zipper": "./bin/project-zipper"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "ts-node src/cli.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist/**/*",
+    "bin/**/*"
+  ],
+  "keywords": [
+    "zip",
+    "project",
+    "gitignore",
+    "archive"
+  ],
+  "dependencies": {
+    "archiver": "7.0.1",
+    "commander": "14.0.0",
+    "glob": "11.0.3",
+    "ignore": "7.0.5"
+  },
+  "devDependencies": {
+    "@types/archiver": "^6.0.3",
+    "@types/node": "^24.0.13"
+  }
+}
