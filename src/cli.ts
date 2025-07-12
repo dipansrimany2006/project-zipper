@@ -5,9 +5,9 @@ import { ZipOptions } from './types';
 const program = new Command();
 
 program
-  .name('project-zipper')
+  .name('zipper')
   .description('Create a zip of your project respecting .gitignore patterns')
-  .version('1.0.0')
+  .version('0.0.1')
   .option('-o, --output <path>', 'output directory', './dist')
   .option('-n, --name <name>', 'zip file name', 'project.zip')
   .option('--include-hidden', 'include hidden files', false)
